@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<?php
+
+    $request = new \engine\http\Request();
+    $mahasiswa = new \model\Mahasiswa();
+    
+    $mahasiswa->select($mahasiswa->getTable())->where()->comparing("nim", $request->get(2))->ready();
+    $row = $mahasiswa->getStatement()->fetch();
+    
+    echo $row[0];
+    
+    
+?>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Perbarui data mahasiswa</title>
+    </head>
+    <body>
+        <h3>Perbarui Data Mahasiswa</h3>
+        <form action="<?php url('perbaruiMahasiswa/') ?>" method="post">
+            <input type="text" name="nim" placeholder="nim" value="<?php echo $request->get(2); ?>"><br><br>
+            
+            <input type="text" name="nama" placeholder="nama" value="<?php echo $row[1]; ?>"><br><br>
+            <input type="text" name="tempatLahir" placeholder="tempatLahir" value="<?php echo $row[2]; ?>"><br><br>
+            <input type="text" name="tanggalLahir" placeholder="tanggalLahir" value="<?php echo $row[3]; ?>"><br><br>
+            <input type="text" name="alamat" placeholder="alamat" value="<?php echo $row[4]; ?>"><br><br>
+            
+            <input type="submit" name="submit" value="perbarui"><br><br>
+        </form>
+    </body>
+</html>

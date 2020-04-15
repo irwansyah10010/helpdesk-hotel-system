@@ -1,0 +1,18 @@
+{  
+    "App":{
+        "App_name" : "SIHH - ",
+        "App_server" : "/Sistem_helpdesk_hotel/",
+        "App_import" : "/Sistem_helpdesk_hotel/asset/",
+        "App_files" : "/Sistem_helpdesk_hotel/files/"
+    },
+    
+    
+    "Database":{
+        "DB_driver": "mysql",
+        "DB_name" : "SIHH",
+        "DB_port" : 3306,
+        "DB_host" :"localhost",
+        "DB_user" :"root",
+        "DB_password" :""
+    }
+}
