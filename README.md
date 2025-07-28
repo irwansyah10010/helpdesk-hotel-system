@@ -1,7 +1,8 @@
 # Helpdesk-hotel-system
-sample Nano--alpha(helpdesk hotel system)
+This system using Nano--alpha web framework
 
-import sihh.sql to phpmyadmin
+**Note**:
+import sihh.sql file to phpmyadmin
 
 enjoy !!!
 
